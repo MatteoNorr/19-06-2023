@@ -1,0 +1,43 @@
+const Like = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlSpace="preserve"
+      width={23}
+      height={20}
+      viewBox="0 0 256 256"
+    >
+      <g
+        style={{
+          stroke: "none",
+          strokeWidth: 0,
+          strokeDasharray: "none",
+          strokeLinecap: "butt",
+          strokeLinejoin: "miter",
+          strokeMiterlimit: 10,
+          fill: "none",
+          fillRule: "nonzero",
+          opacity: 1,
+        }}
+      >
+        <path
+          d="M45 84.334 6.802 46.136A23.07 23.07 0 0 1 0 29.716a23.07 23.07 0 0 1 6.802-16.42 23.07 23.07 0 0 1 16.42-6.802 23.07 23.07 0 0 1 16.42 6.802L45 18.654l5.358-5.358a23.07 23.07 0 0 1 16.42-6.802 23.07 23.07 0 0 1 16.42 6.802A23.065 23.065 0 0 1 90 29.716a23.065 23.065 0 0 1-6.802 16.42L45 84.334zm-21.778-73.84c-5.134 0-9.961 2-13.592 5.63S4 24.582 4 29.716s2 9.961 5.63 13.592L45 78.678l35.37-35.37C84.001 39.677 86 34.85 86 29.716s-1.999-9.961-5.63-13.592a19.098 19.098 0 0 0-13.592-5.63 19.1 19.1 0 0 0-13.592 5.63L45 24.311l-8.187-8.187a19.096 19.096 0 0 0-13.591-5.63z"
+          style={{
+            stroke: "none",
+            strokeWidth: 1,
+            strokeDasharray: "none",
+            strokeLinecap: "butt",
+            strokeLinejoin: "miter",
+            strokeMiterlimit: 10,
+            fill: "#000",
+            fillRule: "nonzero",
+            opacity: 1,
+          }}
+          transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+        />
+      </g>
+    </svg>
+  );
+};
+
+export default Like;

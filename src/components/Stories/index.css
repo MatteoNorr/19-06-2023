@@ -1,0 +1,17 @@
+@media screen and (max-width: 1400px) {
+  .Stories__list {
+    max-width: 100vw;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style-type: none;
+    overflow-x: scroll;
+    padding: 0 3%;
+    margin: 0;
+  }
+
+  .Stories__list::-webkit-scrollbar {
+    display: none;
+  }
+}

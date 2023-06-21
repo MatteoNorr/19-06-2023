@@ -1,18 +1,24 @@
-@media screen and (max-width: 1440px) {
-  .Story {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.Story {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
+.Story img {
+  width: 90px;
+  height: 89px;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom, #fbaa47, #d91a46, #a60f93) border-box;
+  border-radius: 50em;
+  border: 4px solid transparent;
+}
+
+@media screen and (max-width: 1440px) {
   .Story img {
     width: 60px;
     height: 59px;
-    background: linear-gradient(white, white) padding-box,
-      linear-gradient(to bottom, #fbaa47, #d91a46, #a60f93) border-box;
-    border-radius: 50em;
-    border: 4px solid transparent;
   }
 }

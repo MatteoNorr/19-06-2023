@@ -1,6 +1,6 @@
 .Post {
-  width: 100%;
-  height: 300px;
+  padding-bottom: 12px;
+  border-bottom: solid rgba(108, 108, 108, 0.322) 1px;
 }
 
 .Post__info {
@@ -16,10 +16,15 @@
 }
 
 .user-info {
+  width: 100%;
   height: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.user-img {
+  padding: 0 8px;
 }
 
 .user-info p {
@@ -35,19 +40,26 @@
   font-size: 14px;
 }
 
+.Post__img {
+  max-width: 100%;
+}
+
 .Post__img img {
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
   height: 375px;
+  border-radius: 10px;
 }
 
 .Post__comment {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 5px;
 }
 
 .liked {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   font-size: 11px;
 }
@@ -55,6 +67,7 @@
 .Post__comment__user-img {
   width: 20px;
   height: 20px;
+  padding: 0 10px;
 }
 
 .Post__comment__user-username {
@@ -69,5 +82,24 @@
 .Post__comment__user-username,
 .Post__comment__user-content {
   margin: 0;
-  padding: 0 2%;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .Posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Posts {
+    margin: 0 20px;
+    max-width: 100%;
+  }
+
+  .Post {
+    width: 100%;
+  }
 }

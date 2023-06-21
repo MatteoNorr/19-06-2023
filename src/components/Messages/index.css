@@ -1,0 +1,95 @@
+.Messages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Messages__input {
+  position: relative;
+  width: 95%;
+  padding: 2%;
+}
+
+.SearchIcon {
+  position: absolute;
+  left: 3%;
+  top: 40%;
+}
+
+.Messages__input input {
+  left: 0;
+  width: calc(100% - 30px);
+  height: 25px;
+  background: rgba(232, 232, 232, 0.503);
+  border: solid rgba(0, 0, 0, 0.25) 1px;
+  border-radius: 12px;
+  outline: none;
+  padding-left: 3%;
+}
+
+.Messages__input input::placeholder {
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.Messages__title {
+  padding-left: 3%;
+  font-size: 1rem;
+}
+
+.message {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.message__photo {
+  padding: 1% 2%;
+}
+
+.message__photo img {
+  width: 60px;
+  height: 60px;
+  border: solid rgba(112, 112, 112, 0.7) 1px;
+  border-radius: 50%;
+}
+
+.message__from {
+  width: 100%;
+}
+
+.message__from p {
+  margin: 0;
+}
+
+.message__from p:first-child {
+  font-weight: 800;
+}
+
+.message__from p:last-child {
+  font-weight: 300;
+}
+
+.lastAccess {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: right;
+  font-weight: 200;
+}
+
+@media screen and (max-width: 767px) {
+  .Messages__input input {
+    width: 84%;
+    padding: 0 40px;
+  }
+
+  .SearchIcon {
+    top: 33%;
+    left: 5%;
+  }
+}

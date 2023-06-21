@@ -1,43 +1,22 @@
-import Like from "../icons/Like";
+import Post from "../Post";
+import { OthersActions } from "../icons";
+
 import "./index.css";
 
-const Posts = ({ post }) => {
+const Posts = ({ posts }) => {
   return (
-    <div className="Post">
-      {post.map((post) => (
-        <div key={post.id}>
+    <div className="Posts">
+      {posts.map((post) => (
+        <div className="Post" key={post.id}>
           <div className="Post__info">
             <img className="user-img" src={post.userImage} />
             <div className="user-info">
               <p className="username">{post.userName}</p>
               <p className="user-location">{post.location}</p>
             </div>
+            <OthersActions />
           </div>
-          {post.media.map((media) => (
-            <div className="Post__img" key={post.id}>
-              <img src={media.src} />
-            </div>
-          ))}
-          {post.comments.map((comment) => (
-            <div key={post.id}>
-              <Like />
-              <div className="Post__comment" key={post.id}>
-                <div className="liked">
-                  <img
-                    className="Post__comment__user-img"
-                    src={post.userImage}
-                  />
-                  <p>{`Liked by ${post.userName}`}</p>
-                </div>
-              </div>
-              <div className="comment">
-                <p className="Post__comment__user-username">
-                  {comment.userName}
-                </p>
-                <p className="Post__comment__user-content">{comment.content}</p>
-              </div>
-            </div>
-          ))}
+          <Post post={post} />
         </div>
       ))}
     </div>

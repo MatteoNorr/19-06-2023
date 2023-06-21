@@ -1,0 +1,10 @@
+.CameraIcon,
+.Logo,
+.IGTVIcon,
+.Messages,
+.MessageIcon,
+.Like,
+.Comment,
+.OtherActions {
+  cursor: pointer;
+}

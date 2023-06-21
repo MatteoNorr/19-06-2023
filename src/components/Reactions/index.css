@@ -1,0 +1,16 @@
+.Reactions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 1%;
+}
+
+.MessageIcon {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .Reactions {
+    padding: 2% 3%;
+  }
+}

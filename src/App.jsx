@@ -5,6 +5,7 @@ import Camera from "./components/Camera";
 import IGTV from "./components/IGTV";
 import Messages from "./components/Messages";
 import { useState, useEffect } from "react";
+import { GET } from "./components/utils/https";
 import "./App.css";
 
 function App() {
@@ -15,19 +16,19 @@ function App() {
 
   useEffect(() => {
     // fetch stories
-    fetch("https://api.npoint.io/3c613f25cc62d6741d8c")
-      .then((res) => res.json())
-      .then((data) => setStories(data));
+    GET("https://api.npoint.io/3c613f25cc62d6741d8c").then((data) =>
+      setStories(data)
+    );
 
     // fetch post
-    fetch("https://api.npoint.io/8be99baa9f2796022b55")
-      .then((res) => res.json())
-      .then((data) => setPosts(data));
+    GET("https://api.npoint.io/8be99baa9f2796022b55").then((data) =>
+      setPosts(data)
+    );
 
     // fetch messages
-    fetch("https://api.npoint.io/824c8271a896d440321f")
-      .then((res) => res.json())
-      .then((data) => setMessages(data));
+    GET("https://api.npoint.io/45615d0ddef177eef95b").then((data) =>
+      setMessages(data)
+    );
   }, []);
 
   const render = () => {

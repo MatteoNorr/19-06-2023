@@ -5,7 +5,6 @@ const OthersActions = () => {
     <svg
       className="OtherActions"
       aria-label="Altre opzioni"
-      class="_ab6-"
       color="rgb(0, 0, 0)"
       fill="rgb(0, 0, 0)"
       height="24"

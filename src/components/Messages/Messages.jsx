@@ -2,7 +2,6 @@ import { useState } from "react";
 import { SearchIcon } from "../icons";
 import { SendPicture } from "../icons";
 import Chat from "../Chat/index";
-
 import "./index.css";
 
 const Messages = ({ messages }) => {
@@ -10,22 +9,7 @@ const Messages = ({ messages }) => {
 
   const onClickOnChat = (name) => setChat(name);
 
-  const renderSingleChat = () => {
-    switch (chat) {
-      case "":
-        return chat;
-      case "Emily":
-        return <Chat chat={messages} name="Emily" />;
-      case "Sarah":
-        return <Chat chat={messages} name="Sarah" />;
-      case "David":
-        return <Chat chat={messages} name="David" />;
-      case "Alex":
-        return <Chat chat={messages} name="Alex" />;
-      case "Jessica":
-        return <Chat chat={messages} name="Jessica" />;
-    }
-  };
+  const renderSingleChat = () => <Chat chat={chat} />;
 
   return (
     <div className="Messages">
@@ -39,7 +23,7 @@ const Messages = ({ messages }) => {
           <div
             className="message"
             key={Math.random() * 100}
-            onClick={() => onClickOnChat(message.participants[1].username)}
+            onClick={() => onClickOnChat(message)}
           >
             <div className="message__photo">
               <img src={message.participants[1].avatar_url} alt="" />

@@ -4,8 +4,9 @@ import Stories from "./components/Stories";
 import Camera from "./components/Camera";
 import IGTV from "./components/IGTV";
 import Messages from "./components/Messages";
-import { useState, useEffect } from "react";
+import SwiperRender from "./components/Swiper";
 import { GET } from "./components/utils/https";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
@@ -31,12 +32,20 @@ function App() {
     );
   }, []);
 
+  const onClickRenderStory = () => {
+    setSections("storyRender");
+  };
+
   const render = () => {
     switch (section) {
       case "home":
         return (
           <>
-            <Stories stories={stories} />
+            <Stories
+              stories={stories}
+              onClickRenderStory={onClickRenderStory}
+              setSection={onClickRenderStory}
+            />
             <Posts posts={posts} />
           </>
         );
@@ -46,6 +55,13 @@ function App() {
         return <IGTV />;
       case "messages":
         return <Messages messages={messages} />;
+      case "storyRender":
+        return (
+          <SwiperRender
+            stories={posts}
+            setSection={() => setSections("home")}
+          />
+        );
     }
   };
 

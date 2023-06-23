@@ -8,7 +8,6 @@ const Messages = ({ messages }) => {
   const [chat, setChat] = useState("");
 
   const onClickOnChat = (name) => setChat(name);
-
   const renderSingleChat = () => <Chat chat={chat} />;
 
   return (
